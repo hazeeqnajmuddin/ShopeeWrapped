@@ -1,0 +1,12 @@
+# User personal purchase data
+shopee_orders.json
+shopee_orders*.json
+*.csv
+!sample_orders.json
+
+# Operating System & Editor Files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

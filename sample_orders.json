@@ -1,0 +1,308 @@
+[
+  {
+    "orderId": "261010881001",
+    "date": "2026-10-10",
+    "shop": "Sony Official Store",
+    "items": "Sony WH-1000XM5 Wireless Noise Cancelling Headphones (x1)",
+    "qty": 1,
+    "paid": 1249.00,
+    "saved": 350.00
+  },
+  {
+    "orderId": "260909881002",
+    "date": "2026-09-09",
+    "shop": "Baseus Official Store",
+    "items": "Baseus 65W GaN Fast Charger Type-C (x2); UGREEN Cable Organizer (x1)",
+    "qty": 3,
+    "paid": 142.50,
+    "saved": 45.00
+  },
+  {
+    "orderId": "260824881003",
+    "date": "2026-08-24",
+    "shop": "Watsons Malaysia Official",
+    "items": "CeraVe Moisturizing Lotion 473ml & Daily Sunscreen SPF50 (x1)",
+    "qty": 1,
+    "paid": 118.40,
+    "saved": 28.60
+  },
+  {
+    "orderId": "260808881004",
+    "date": "2026-08-08",
+    "shop": "Shopee Supermarket",
+    "items": "Nescafe Gold Refill Pack 200g (x2); Milo Activ-Go 2kg (x1)",
+    "qty": 3,
+    "paid": 98.70,
+    "saved": 22.00
+  },
+  {
+    "orderId": "260715881005",
+    "date": "2026-07-15",
+    "shop": "Decathlon Official",
+    "items": "Microfiber Travel Towel XL & Non-Slip Yoga Mat (x1)",
+    "qty": 1,
+    "paid": 79.00,
+    "saved": 12.00
+  },
+  {
+    "orderId": "260707881006",
+    "date": "2026-07-07",
+    "shop": "Keychron Official MY",
+    "items": "Keychron K8 Pro Wireless Mechanical Keyboard RGB Hot-swap (x1)",
+    "qty": 1,
+    "paid": 429.00,
+    "saved": 65.00
+  },
+  {
+    "orderId": "260618881007",
+    "date": "2026-06-18",
+    "shop": "Logitech Official Store",
+    "items": "Logitech MX Master 3S Wireless Mouse - Graphite (x1)",
+    "qty": 1,
+    "paid": 389.00,
+    "saved": 80.00
+  },
+  {
+    "orderId": "260606881008",
+    "date": "2026-06-06",
+    "shop": "Uniqlo Official Partner",
+    "items": "Oversized Airism Cotton Crew Neck T-Shirt (x3)",
+    "qty": 3,
+    "paid": 147.00,
+    "saved": 25.00
+  },
+  {
+    "orderId": "260505881009",
+    "date": "2026-05-05",
+    "shop": "Anker Official Store",
+    "items": "Anker Zolo Magnetic Powerbank 10000mAh 30W Fast Charge (x1)",
+    "qty": 1,
+    "paid": 129.00,
+    "saved": 35.00
+  },
+  {
+    "orderId": "260404881010",
+    "date": "2026-04-04",
+    "shop": "Kinokuniya Book Store",
+    "items": "Atomic Habits & Psychology of Money Hardcover Edition (x2)",
+    "qty": 2,
+    "paid": 104.00,
+    "saved": 18.00
+  },
+  {
+    "orderId": "260325881011",
+    "date": "2026-03-25",
+    "shop": "IKEA Personal Shopper",
+    "items": "SKADIS Pegboard White 76x56cm + Hook Accessories Set (x1)",
+    "qty": 1,
+    "paid": 96.50,
+    "saved": 15.00
+  },
+  {
+    "orderId": "260303881012",
+    "date": "2026-03-03",
+    "shop": "Nespresso Flagship",
+    "items": "Ispirazione Italiana Coffee Capsules Variety 50 Pods (x1)",
+    "qty": 1,
+    "paid": 135.00,
+    "saved": 20.00
+  },
+  {
+    "orderId": "260202881013",
+    "date": "2026-02-02",
+    "shop": "Xiaomi Official Store",
+    "items": "Xiaomi Smart Air Purifier 4 Compact with HEPA Filter (x1)",
+    "qty": 1,
+    "paid": 319.00,
+    "saved": 60.00
+  },
+  {
+    "orderId": "260115881014",
+    "date": "2026-01-15",
+    "shop": "Puma Official Store",
+    "items": "PUMA Unisex Palermo Leather Sneakers Black/White (x1)",
+    "qty": 1,
+    "paid": 359.00,
+    "saved": 90.00
+  },
+  {
+    "orderId": "251212881015",
+    "date": "2025-12-12",
+    "shop": "Dyson Official Store",
+    "items": "Dyson V12 Detect Slim Fluffy Cordless Vacuum (x1)",
+    "qty": 1,
+    "paid": 2399.00,
+    "saved": 520.00
+  },
+  {
+    "orderId": "251212881016",
+    "date": "2025-12-12",
+    "shop": "Samsung Authorized Mall",
+    "items": "Samsung Galaxy Buds3 Pro Silver (x1)",
+    "qty": 1,
+    "paid": 699.00,
+    "saved": 150.00
+  },
+  {
+    "orderId": "251111881017",
+    "date": "2025-11-11",
+    "shop": "Innisfree Official Mall",
+    "items": "Green Tea Seed Hyaluronic Serum Intensive Hydration Set (x1)",
+    "qty": 1,
+    "paid": 112.00,
+    "saved": 38.00
+  },
+  {
+    "orderId": "251111881018",
+    "date": "2025-11-11",
+    "shop": "Ugreen Official Flagship",
+    "items": "UGREEN USB-C to USB-C 100W Cable 2M (x2); UGREEN HDMI 2.1 (x1)",
+    "qty": 3,
+    "paid": 58.90,
+    "saved": 24.00
+  },
+  {
+    "orderId": "251010881019",
+    "date": "2025-10-10",
+    "shop": "Shopee Supermarket",
+    "items": "Breeze Liquid Detergent 3.8kg (x2); Dettol Handwash Refill (x3)",
+    "qty": 5,
+    "paid": 74.30,
+    "saved": 19.50
+  },
+  {
+    "orderId": "250909881020",
+    "date": "2025-09-09",
+    "shop": "Baseus Official Store",
+    "items": "Baseus Magnetic Phone Car Mount MagSafe Compatible (x1)",
+    "qty": 1,
+    "paid": 45.00,
+    "saved": 16.00
+  },
+  {
+    "orderId": "250808881021",
+    "date": "2025-08-08",
+    "shop": "Watsons Malaysia Official",
+    "items": "La Roche-Posay Effaclar Duo+ 40ml & Thermal Spring Water (x1)",
+    "qty": 1,
+    "paid": 139.00,
+    "saved": 32.00
+  },
+  {
+    "orderId": "250707881022",
+    "date": "2025-07-07",
+    "shop": "Logitech Official Store",
+    "items": "Logitech Desk Mat Studio Series - Lavender (x1)",
+    "qty": 1,
+    "paid": 79.00,
+    "saved": 20.00
+  },
+  {
+    "orderId": "250606881023",
+    "date": "2025-06-06",
+    "shop": "Decathlon Official",
+    "items": "Quechua Hiking Backpack 20L NH100 & Insulated Bottle (x2)",
+    "qty": 2,
+    "paid": 89.00,
+    "saved": 15.00
+  },
+  {
+    "orderId": "250515881024",
+    "date": "2025-05-15",
+    "shop": "Shopee Supermarket",
+    "items": "Oatside Barista Oat Milk 1L (x6 Carton Pack)",
+    "qty": 6,
+    "paid": 76.80,
+    "saved": 14.20
+  },
+  {
+    "orderId": "250404881025",
+    "date": "2025-04-04",
+    "shop": "Kinokuniya Book Store",
+    "items": "Deep Work by Cal Newport & Show Your Work Paperback (x2)",
+    "qty": 2,
+    "paid": 88.00,
+    "saved": 16.00
+  },
+  {
+    "orderId": "250303881026",
+    "date": "2025-03-03",
+    "shop": "Anker Official Store",
+    "items": "Anker Soundcore Space One Active Noise Cancelling Headphones (x1)",
+    "qty": 1,
+    "paid": 329.00,
+    "saved": 70.00
+  },
+  {
+    "orderId": "250120881027",
+    "date": "2025-01-20",
+    "shop": "Uniqlo Official Partner",
+    "items": "Ultra Light Down Jacket Packable Navy (x1)",
+    "qty": 1,
+    "paid": 279.00,
+    "saved": 40.00
+  },
+  {
+    "orderId": "241212881028",
+    "date": "2024-12-12",
+    "shop": "Sony Official Store",
+    "items": "Sony DualSense Wireless Controller PS5 Midnight Black (x1)",
+    "qty": 1,
+    "paid": 319.00,
+    "saved": 50.00
+  },
+  {
+    "orderId": "241111881029",
+    "date": "2024-11-11",
+    "shop": "Keychron Official MY",
+    "items": "Keychron Walnut Wood Palm Rest for K8/K8 Pro (x1)",
+    "qty": 1,
+    "paid": 99.00,
+    "saved": 25.00
+  },
+  {
+    "orderId": "241010881030",
+    "date": "2024-10-10",
+    "shop": "Xiaomi Official Store",
+    "items": "Xiaomi Mijia Electric Screwdriver 12 S2 Steel Bits (x1)",
+    "qty": 1,
+    "paid": 129.00,
+    "saved": 30.00
+  },
+  {
+    "orderId": "240909881031",
+    "date": "2024-09-09",
+    "shop": "Shopee Supermarket",
+    "items": "Ariel Laundry Detergent Capsules 34 pods (x2)",
+    "qty": 2,
+    "paid": 62.40,
+    "saved": 15.60
+  },
+  {
+    "orderId": "240707881032",
+    "date": "2024-07-07",
+    "shop": "Baseus Official Store",
+    "items": "Baseus Screenbar Monitor Light Bar Stepless Dimming (x1)",
+    "qty": 1,
+    "paid": 139.00,
+    "saved": 40.00
+  },
+  {
+    "orderId": "240505881033",
+    "date": "2024-05-05",
+    "shop": "Ugreen Official Flagship",
+    "items": "UGREEN Vertical Ergonomic Wireless Mouse 4000 DPI (x1)",
+    "qty": 1,
+    "paid": 69.90,
+    "saved": 18.00
+  },
+  {
+    "orderId": "240303881034",
+    "date": "2024-03-03",
+    "shop": "Watsons Malaysia Official",
+    "items": "Oral-B Vitality Precision Clean Electric Toothbrush Set (x1)",
+    "qty": 1,
+    "paid": 115.00,
+    "saved": 25.00
+  }
+]
