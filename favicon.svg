@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="shopeeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7337"/>
+      <stop offset="100%" stop-color="#EE4D2D"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Rounded Square -->
+  <rect width="64" height="64" rx="16" fill="url(#shopeeGrad)"/>
+  <!-- Bag Handle -->
+  <path d="M22 23c0-5.5 4.5-10 10-10s10 4.5 10 10" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <!-- Bag Body -->
+  <path d="M15 22h34l-2.8 28.5a4 4 0 0 1-4 3.5H21.8a4 4 0 0 1-4-3.5L15 22z" fill="#ffffff"/>
+  <!-- Shopee 'S' Monogram -->
+  <path d="M35.5 32.5c-1-1-2.2-1.5-3.5-1.5-2.8 0-4.5 1.5-4.5 3.3 0 3.8 8.5 2.2 8.5 7.2 0 2.5-2.2 4.5-5.5 4.5-2.8 0-4.8-1.2-5.8-2.5" fill="none" stroke="#EE4D2D" stroke-width="3.2" stroke-linecap="round"/>
+</svg>
