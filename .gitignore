@@ -3,6 +3,7 @@ shopee_orders.json
 shopee_orders*.json
 *.csv
 !sample_orders.json
+shopee_wrapped*.png
 
 # Operating System & Editor Files
 .DS_Store
