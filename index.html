@@ -415,21 +415,21 @@
 
         <!-- Right 1 Column: Shareable "Shopee Wrapped" Card -->
         <div class="flex flex-col space-y-4">
-          <div id="wrapped-card" class="wrapped-card-gradient rounded-3xl p-6 text-white shadow-2xl relative overflow-hidden flex flex-col gap-4" style="border: 1px solid rgba(255, 255, 255, 0.16);">
+          <div id="wrapped-card" class="wrapped-card-gradient rounded-3xl p-6 text-white shadow-2xl relative flex flex-col gap-4" style="border: 1px solid rgba(255, 255, 255, 0.20);">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-2">
                 <span class="text-xl">🛍️</span>
                 <span class="font-display font-extrabold text-sm tracking-wider uppercase text-white">Shopee Wrapped</span>
               </div>
-              <span id="wrapped-year-label" class="px-3 py-0.5 rounded-full bg-black/40 text-xs font-bold text-white uppercase tracking-wider" style="border: 1px solid rgba(255, 255, 255, 0.18);">
+              <span id="wrapped-year-label" class="px-3.5 py-1 rounded-full bg-black/40 text-xs font-bold text-white uppercase tracking-wider inline-flex items-center justify-center" style="border: 1px solid rgba(255, 255, 255, 0.25); line-height: 1.4;">
                 ALL TIME
               </span>
             </div>
 
             <!-- Shopper Persona -->
-            <div class="bg-white/[0.11] rounded-2xl p-4 shadow-sm" style="border: 1px solid rgba(255, 255, 255, 0.16);">
-              <div class="text-[10.5px] uppercase tracking-widest text-orange-200 font-bold">Your Shopper Persona</div>
-              <div id="wrapped-persona-title" class="font-display text-xl sm:text-2xl font-extrabold mt-1 text-white">
+            <div class="bg-white/[0.11] rounded-2xl p-4 shadow-sm" style="border: 1px solid rgba(255, 255, 255, 0.18);">
+              <div class="text-[11px] uppercase tracking-widest text-orange-200 font-bold">Your Shopper Persona</div>
+              <div id="wrapped-persona-title" class="font-display text-xl sm:text-2xl font-extrabold mt-1 text-white leading-snug">
                 🏆 Mega Sale VIP
               </div>
               <p id="wrapped-persona-desc" class="text-xs text-orange-100 font-medium mt-1 leading-relaxed">
@@ -440,20 +440,20 @@
             <!-- Big Total Spend -->
             <div>
               <div class="text-xs uppercase tracking-wider text-orange-200 font-bold">Total Damage Done</div>
-              <div id="wrapped-total-spent" class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight mt-0.5 text-white">
+              <div id="wrapped-total-spent" class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight mt-1 text-white leading-tight">
                 RM 0.00
               </div>
             </div>
 
             <!-- Mini Grid Stats -->
             <div class="grid grid-cols-2 gap-3">
-              <div class="bg-white/[0.11] rounded-xl p-3 shadow-sm" style="border: 1px solid rgba(255, 255, 255, 0.16);">
+              <div class="bg-white/[0.11] rounded-xl p-3 shadow-sm" style="border: 1px solid rgba(255, 255, 255, 0.18);">
                 <div class="text-[11px] font-semibold text-orange-200">Orders Placed</div>
-                <div id="wrapped-orders" class="font-display text-lg font-extrabold mt-0.5 text-white">0</div>
+                <div id="wrapped-orders" class="font-display text-lg font-extrabold mt-1 text-white leading-snug">0</div>
               </div>
-              <div class="bg-white/[0.11] rounded-xl p-3 shadow-sm" style="border: 1px solid rgba(255, 255, 255, 0.16);">
+              <div class="bg-white/[0.11] rounded-xl p-3 shadow-sm" style="border: 1px solid rgba(255, 255, 255, 0.18);">
                 <div class="text-[11px] font-semibold text-orange-200">Total Saved</div>
-                <div id="wrapped-saved" class="font-display text-lg font-extrabold text-emerald-300 mt-0.5">RM 0</div>
+                <div id="wrapped-saved" class="font-display text-lg font-extrabold text-emerald-300 mt-1 leading-snug">RM 0</div>
               </div>
             </div>
 
@@ -465,9 +465,12 @@
               </div>
             </div>
 
-            <div class="pt-3 flex items-center justify-between text-[11px] text-orange-200 font-medium" style="border-top: 1px solid rgba(255, 255, 255, 0.16);">
-              <span>Generated via ShopeeWrapped</span>
-              <span class="inline-flex items-center gap-1 bg-black/30 px-2 py-0.5 rounded-full text-orange-100" style="border: 1px solid rgba(255, 255, 255, 0.16);">🔒 100% Private</span>
+            <div class="pt-3.5 flex items-center justify-between text-xs text-orange-100 font-medium" style="border-top: 1px solid rgba(255, 255, 255, 0.20);">
+              <span class="font-bold tracking-tight text-white flex items-center gap-1.5">
+                <span>ShopeeWrapped</span>
+                <span class="text-orange-200 font-normal text-[11px]">• by hazeeq.my</span>
+              </span>
+              <span class="inline-flex items-center gap-1 bg-black/40 px-2.5 py-1 rounded-full text-[11px] font-semibold text-orange-100" style="border: 1px solid rgba(255, 255, 255, 0.20); line-height: 1.3;">🔒 100% Private</span>
             </div>
           </div>
 
@@ -475,7 +478,7 @@
           <!-- Share Buttons: Save Image & Copy Text -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             <button onclick="downloadWrappedImage()" id="download-card-btn" class="w-full py-3 px-3.5 rounded-2xl shopee-gradient hover:opacity-95 text-xs sm:text-sm font-bold text-white flex items-center justify-center gap-2 shadow-lg shadow-shopee-500/25 transition">
-              <span>🖼️</span> Save Card (PNG)
+              <span>📱</span> Save Story (PNG 9:16)
             </button>
             <button onclick="copyWrappedSummary()" class="w-full py-3 px-3.5 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs sm:text-sm font-bold text-white flex items-center justify-center gap-2 shadow-lg transition">
               <span>📋</span> Copy Summary Text
@@ -547,9 +550,10 @@
     </section>
   </main>
 
-  <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-slate-900 text-center text-xs text-slate-500 space-y-1">
+  <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-slate-900 text-center text-xs text-slate-500 space-y-1.5">
     <p>Shopee Wrapped & Spend Analyzer is an independent, privacy-first utility and is not affiliated with Shopee.</p>
     <p>All calculations happen locally inside your browser's memory.</p>
+    <p class="pt-1 text-slate-400">Crafted with ❤️ by <a href="https://hazeeq.my" target="_blank" rel="noopener" class="text-shopee-400 hover:text-shopee-300 font-semibold underline decoration-shopee-500/40 underline-offset-2">hazeeq.my</a></p>
   </footer>
 
   <!-- ========================================== -->
@@ -1113,25 +1117,50 @@
         .sort((a, b) => b.paid - a.paid)
         .slice(0, 3);
 
-      const topItemsContainer = document.getElementById('wrapped-top-shops');
-      topItemsContainer.innerHTML = topExpensiveOrders.map((o, idx) => {
+      const parsedExpensiveItems = topExpensiveOrders.map(o => {
         let cleanName = (o.items || 'Shopee Order').split(';')[0].trim();
         cleanName = cleanName.replace(/[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, '').trim();
         cleanName = cleanName.replace(/\s*\(x\d+\)\s*$/i, '').trim();
         cleanName = cleanName.replace(/\s*\[[^\]]+\]\s*$/i, '').trim();
-        if (cleanName.length > 40) {
-          cleanName = cleanName.slice(0, 39).trim() + '…';
+        return {
+          name: cleanName,
+          price: formatMoney(o.paid),
+          rawPrice: o.paid,
+          fullName: o.items || cleanName
+        };
+      });
+
+      // Save structured wrapped data for story card generation
+      window.currentWrappedData = {
+        yearLabel: selectedYear === 'ALL' ? 'ALL TIME' : selectedYear,
+        personaTitle,
+        personaDesc,
+        totalSpent: formatMoney(totalSpent),
+        totalSaved: formatMoney(totalSaved),
+        orderCount,
+        totalItems,
+        saveRate,
+        avgOrder: formatMoney(avgOrder),
+        maxOrderPaid: formatMoney(maxOrder.paid),
+        topExpensiveItems: parsedExpensiveItems
+      };
+
+      const topItemsContainer = document.getElementById('wrapped-top-shops');
+      topItemsContainer.innerHTML = parsedExpensiveItems.map((item, idx) => {
+        let cleanName = item.name;
+        if (cleanName.length > 38) {
+          cleanName = cleanName.slice(0, 37).trim() + '…';
         }
         return `
-          <div class="flex items-center justify-between bg-white/[0.10] px-3 py-2 rounded-xl shadow-sm" style="border: 1px solid rgba(255, 255, 255, 0.16);">
+          <div class="flex items-center justify-between bg-white/[0.10] px-3.5 py-2.5 rounded-xl shadow-sm" style="border: 1px solid rgba(255, 255, 255, 0.18);">
             <div class="flex items-center gap-2.5 min-w-0 flex-1 pr-3">
-              <span class="w-5 h-5 rounded-md flex items-center justify-center text-[10.5px] font-extrabold shrink-0 ${idx === 0 ? 'bg-amber-400/30 text-amber-300 border border-amber-400/40' : idx === 1 ? 'bg-slate-200/22 text-white border border-white/35' : 'bg-amber-700/30 text-amber-200 border border-amber-600/40'}">${idx + 1}</span>
-              <span class="font-semibold text-white tracking-tight leading-normal truncate" style="padding-bottom: 1px;" title="${escapeHtml(o.items)}">${escapeHtml(cleanName)}</span>
+              <span class="w-5 h-5 rounded-md flex items-center justify-center text-[11px] font-extrabold shrink-0 ${idx === 0 ? 'bg-amber-400/30 text-amber-300 border border-amber-400/40' : idx === 1 ? 'bg-slate-200/22 text-white border border-white/35' : 'bg-amber-700/30 text-amber-200 border border-amber-600/40'}">${idx + 1}</span>
+              <span class="font-semibold text-white tracking-tight leading-relaxed truncate" title="${escapeHtml(item.fullName)}">${escapeHtml(cleanName)}</span>
             </div>
-            <span class="font-bold text-orange-100 shrink-0 text-xs">${formatMoney(o.paid)}</span>
+            <span class="font-bold text-orange-100 shrink-0 text-xs">${escapeHtml(item.price)}</span>
           </div>
         `;
-      }).join('') || '<div class="text-orange-200">No items data</div>';
+      }).join('') || '<div class="text-orange-200 py-1 text-xs">No items data</div>';
     }
 
     // Update Chart.js Visualizations
@@ -1356,35 +1385,318 @@
     }
 
     // Copy Shareable Wrapped Text
-    // Download Shareable Wrapped Card as PNG Image
+    // Generate 9:16 High-Res Story Card (1080 x 1920) for WhatsApp Status & Instagram Story
+    function generateStoryCanvas(data) {
+      const canvas = document.createElement('canvas');
+      canvas.width = 1080;
+      canvas.height = 1920;
+      const ctx = canvas.getContext('2d');
+      const W = 1080;
+      const H = 1920;
+
+      // 1. Multi-stop Rich Radial + Linear Gradient Background
+      const bgGrad = ctx.createLinearGradient(0, 0, W, H);
+      bgGrad.addColorStop(0, '#FF5E36');
+      bgGrad.addColorStop(0.20, '#EE4D2D');
+      bgGrad.addColorStop(0.45, '#C62806');
+      bgGrad.addColorStop(0.72, '#2C0B14');
+      bgGrad.addColorStop(1, '#110408');
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, W, H);
+
+      // Glowing corner radial orbs for rich depth
+      const orb1 = ctx.createRadialGradient(880, 240, 30, 880, 240, 550);
+      orb1.addColorStop(0, 'rgba(255, 215, 0, 0.38)');
+      orb1.addColorStop(0.5, 'rgba(255, 150, 0, 0.15)');
+      orb1.addColorStop(1, 'rgba(255, 215, 0, 0)');
+      ctx.fillStyle = orb1;
+      ctx.fillRect(0, 0, W, H);
+
+      const orb2 = ctx.createRadialGradient(160, 1680, 40, 160, 1680, 650);
+      orb2.addColorStop(0, 'rgba(238, 77, 45, 0.45)');
+      orb2.addColorStop(0.6, 'rgba(238, 77, 45, 0.1)');
+      orb2.addColorStop(1, 'rgba(238, 77, 45, 0)');
+      ctx.fillStyle = orb2;
+      ctx.fillRect(0, 0, W, H);
+
+      function drawCard(x, y, w, h, radius, fillStyle, strokeStyle, lineWidth = 2) {
+        ctx.beginPath();
+        ctx.roundRect(x, y, w, h, radius);
+        if (fillStyle) {
+          ctx.fillStyle = fillStyle;
+          ctx.fill();
+        }
+        if (strokeStyle) {
+          ctx.strokeStyle = strokeStyle;
+          ctx.lineWidth = lineWidth;
+          ctx.stroke();
+        }
+      }
+
+      // Safe bounds: Top safe area 130px, sides 64px, inner width 952px
+      const padX = 64;
+      const cardW = W - padX * 2; // 952px
+
+      // SECTION 1: HEADER & YEAR BADGE (Y: 130px)
+      let curY = 130;
+      ctx.font = '900 44px "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+      ctx.fillStyle = '#ffffff';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('🛍️  SHOPEE WRAPPED', padX, curY + 22);
+
+      const yearText = (data.yearLabel || 'ALL TIME').toUpperCase();
+      ctx.font = '800 24px "Plus Jakarta Sans", sans-serif';
+      const yearMetrics = ctx.measureText(yearText);
+      const pillW = yearMetrics.width + 48;
+      const pillH = 48;
+      const pillX = W - padX - pillW;
+      const pillY = curY - 2;
+      drawCard(pillX, pillY, pillW, pillH, 24, 'rgba(0, 0, 0, 0.45)', 'rgba(255, 255, 255, 0.35)', 2);
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fillText(yearText, pillX + 24, pillY + pillH / 2);
+
+      curY += 80;
+      ctx.font = '600 24px "Plus Jakarta Sans", sans-serif';
+      ctx.fillStyle = 'rgba(255, 237, 213, 0.9)';
+      ctx.fillText('Your Personal Shopping Story & Spend Breakdown', padX, curY);
+
+      // SECTION 2: SHOPPER PERSONA CARD (Y: ~260px)
+      curY += 46;
+      const personaH = 248;
+      drawCard(padX, curY, cardW, personaH, 32, 'rgba(255, 255, 255, 0.12)', 'rgba(255, 255, 255, 0.24)', 2);
+
+      ctx.font = '800 22px "Plus Jakarta Sans", sans-serif';
+      ctx.fillStyle = '#FED7AA';
+      ctx.fillText('YOUR SHOPPER PERSONA', padX + 44, curY + 48);
+
+      ctx.font = '900 48px "Plus Jakarta Sans", sans-serif';
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fillText(data.personaTitle || '🛍️ Everyday Smart Shopper', padX + 44, curY + 116);
+
+      ctx.font = '500 26px "Plus Jakarta Sans", sans-serif';
+      ctx.fillStyle = '#FFEDD5';
+      ctx.fillText(data.personaDesc || 'You keep a balanced cart and know how to spot great deals.', padX + 44, curY + 182);
+
+      // SECTION 3: TOTAL DAMAGE DONE (HERO STAT) (Y: ~560px)
+      curY += personaH + 46;
+      ctx.font = '800 24px "Plus Jakarta Sans", sans-serif';
+      ctx.fillStyle = '#FED7AA';
+      ctx.fillText('TOTAL DAMAGE DONE', padX + 6, curY);
+
+      curY += 44;
+      ctx.font = '900 96px "Plus Jakarta Sans", sans-serif';
+      ctx.fillStyle = '#FFFFFF';
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.35)';
+      ctx.shadowBlur = 24;
+      ctx.shadowOffsetY = 6;
+      ctx.fillText(data.totalSpent || 'RM 0.00', padX + 4, curY + 44);
+      ctx.shadowColor = 'transparent';
+
+      // SECTION 4: TWO COLUMN STATS GRID (Y: ~790px)
+      curY += 124;
+      const colGap = 24;
+      const colW = (cardW - colGap) / 2;
+      const colH = 194;
+
+      // Orders Placed
+      drawCard(padX, curY, colW, colH, 28, 'rgba(255, 255, 255, 0.12)', 'rgba(255, 255, 255, 0.22)', 2);
+      ctx.font = '700 22px "Plus Jakarta Sans", sans-serif';
+      ctx.fillStyle = '#FED7AA';
+      ctx.fillText('📦  ORDERS PLACED', padX + 34, curY + 44);
+
+      ctx.font = '900 52px "Plus Jakarta Sans", sans-serif';
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fillText((data.orderCount ?? 0).toString(), padX + 34, curY + 104);
+
+      ctx.font = '600 22px "Plus Jakarta Sans", sans-serif';
+      ctx.fillStyle = 'rgba(255, 237, 213, 0.85)';
+      ctx.fillText(`${data.totalItems ?? 0} total items delivered`, padX + 34, curY + 152);
+
+      // Total Saved
+      drawCard(padX + colW + colGap, curY, colW, colH, 28, 'rgba(255, 255, 255, 0.12)', 'rgba(255, 255, 255, 0.22)', 2);
+      ctx.font = '700 22px "Plus Jakarta Sans", sans-serif';
+      ctx.fillStyle = '#FED7AA';
+      ctx.fillText('🏷️  TOTAL SAVED', padX + colW + colGap + 34, curY + 44);
+
+      ctx.font = '900 48px "Plus Jakarta Sans", sans-serif';
+      ctx.fillStyle = '#6EE7B7';
+      ctx.fillText(data.totalSaved || 'RM 0.00', padX + colW + colGap + 34, curY + 104);
+
+      ctx.font = '600 22px "Plus Jakarta Sans", sans-serif';
+      ctx.fillStyle = '#A7F3D0';
+      ctx.fillText(`${data.saveRate ?? 0}% saved off regular price`, padX + colW + colGap + 34, curY + 152);
+
+      // SECTION 5: MOST EXPENSIVE PURCHASES (Y: ~1035px)
+      curY += colH + 42;
+      const itemsListH = 430;
+      drawCard(padX, curY, cardW, itemsListH, 32, 'rgba(255, 255, 255, 0.10)', 'rgba(255, 255, 255, 0.22)', 2);
+
+      ctx.font = '800 24px "Plus Jakarta Sans", sans-serif';
+      ctx.fillStyle = '#FED7AA';
+      ctx.fillText('👑  MOST EXPENSIVE PURCHASES', padX + 38, curY + 46);
+
+      const defaultRanks = [
+        { color: '#FBBF24', bg: 'rgba(245, 158, 11, 0.35)', border: 'rgba(245, 158, 11, 0.5)' },
+        { color: '#E2E8F0', bg: 'rgba(255, 255, 255, 0.22)', border: 'rgba(255, 255, 255, 0.4)' },
+        { color: '#FB923C', bg: 'rgba(234, 88, 12, 0.32)', border: 'rgba(234, 88, 12, 0.5)' }
+      ];
+
+      const items = (data.topExpensiveItems && data.topExpensiveItems.length > 0)
+        ? data.topExpensiveItems.slice(0, 3)
+        : [
+          { name: 'Shopee Order', price: 'RM 0.00' },
+          { name: 'Shopee Order', price: 'RM 0.00' },
+          { name: 'Shopee Order', price: 'RM 0.00' }
+        ];
+
+      let rowY = curY + 86;
+      const rowH = 92;
+      const rowGap = 16;
+      items.forEach((item, idx) => {
+        const meta = defaultRanks[idx] || defaultRanks[2];
+        drawCard(padX + 24, rowY, cardW - 48, rowH, 20, 'rgba(255, 255, 255, 0.08)', 'rgba(255, 255, 255, 0.16)', 1.5);
+
+        // Badge
+        const badgeSize = 48;
+        const badgeX = padX + 44;
+        const badgeY = rowY + (rowH - badgeSize) / 2;
+        drawCard(badgeX, badgeY, badgeSize, badgeSize, 14, meta.bg, meta.border, 2);
+        ctx.font = '900 24px "Plus Jakarta Sans", sans-serif';
+        ctx.fillStyle = meta.color;
+        ctx.textAlign = 'center';
+        ctx.fillText((idx + 1).toString(), badgeX + badgeSize / 2, badgeY + badgeSize / 2 + 1);
+        ctx.textAlign = 'left';
+
+        // Price
+        ctx.font = '800 28px "Plus Jakarta Sans", sans-serif';
+        const priceText = item.price || 'RM 0.00';
+        const priceMetrics = ctx.measureText(priceText);
+        const priceX = padX + cardW - 48;
+        ctx.fillStyle = '#FED7AA';
+        ctx.textAlign = 'right';
+        ctx.fillText(priceText, priceX, rowY + rowH / 2 + 1);
+        ctx.textAlign = 'left';
+
+        // Product Name (Dynamic width-aware truncation)
+        const nameStartX = badgeX + badgeSize + 22;
+        const maxNameWidth = (priceX - priceMetrics.width - 28) - nameStartX;
+        ctx.font = '700 25px "Plus Jakarta Sans", sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        
+        let displayName = item.name || 'Shopee Item';
+        if (ctx.measureText(displayName).width > maxNameWidth) {
+          while (displayName.length > 5 && ctx.measureText(displayName + '…').width > maxNameWidth) {
+            displayName = displayName.slice(0, -1);
+          }
+          displayName += '…';
+        }
+        ctx.fillText(displayName, nameStartX, rowY + rowH / 2 + 1);
+
+        rowY += rowH + rowGap;
+      });
+
+      // SECTION 6: QUICK HIGHLIGHTS BAR (Y: ~1515px)
+      curY += itemsListH + 34;
+      const funBarH = 96;
+      drawCard(padX, curY, cardW, funBarH, 24, 'rgba(0, 0, 0, 0.32)', 'rgba(255, 255, 255, 0.18)', 1.5);
+      
+      ctx.font = '600 24px "Plus Jakarta Sans", sans-serif';
+      ctx.fillStyle = '#FED7AA';
+      ctx.textAlign = 'center';
+      const avgText = data.avgOrder || 'RM 0.00';
+      const maxText = data.maxOrderPaid || 'RM 0.00';
+      ctx.fillText(`🛍️ Avg Checkout: ${avgText}   •   👑 Splurge: ${maxText}`, W / 2, curY + funBarH / 2 + 1);
+      ctx.textAlign = 'left';
+
+      // SECTION 7: FOOTER & CREDIT (Y: ~1740px)
+      const footerY = 1735;
+      ctx.beginPath();
+      ctx.moveTo(padX, footerY);
+      ctx.lineTo(W - padX, footerY);
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.22)';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+
+      // Footer Credit: "ShopeeWrapped • by hazeeq.my"
+      ctx.font = '800 26px "Plus Jakarta Sans", sans-serif';
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fillText('ShopeeWrapped', padX, footerY + 54);
+      
+      const brandW = ctx.measureText('ShopeeWrapped').width;
+      ctx.font = '600 24px "Plus Jakarta Sans", sans-serif';
+      ctx.fillStyle = '#FED7AA';
+      ctx.fillText('  •  by hazeeq.my', padX + brandW, footerY + 54);
+
+      // Private pill on right
+      const privText = '🔒 100% Private & Local';
+      ctx.font = '700 22px "Plus Jakarta Sans", sans-serif';
+      const privMetrics = ctx.measureText(privText);
+      const privPillW = privMetrics.width + 36;
+      const privPillH = 46;
+      const privPillX = W - padX - privPillW;
+      const privPillY = footerY + 31;
+      drawCard(privPillX, privPillY, privPillW, privPillH, 23, 'rgba(0, 0, 0, 0.42)', 'rgba(255, 255, 255, 0.24)', 1.5);
+      ctx.fillStyle = '#FED7AA';
+      ctx.fillText(privText, privPillX + 18, privPillY + privPillH / 2 + 1);
+
+      return canvas;
+    }
+
+    // Download Shareable 9:16 Story PNG Image (Ready for WhatsApp Status & Instagram Story)
     async function downloadWrappedImage() {
-      const card = document.getElementById('wrapped-card');
       const btn = document.getElementById('download-card-btn');
       const origHtml = btn.innerHTML;
-      btn.innerHTML = '<span>⏳</span> Saving...';
+      btn.innerHTML = '<span>⏳</span> Generating Story...';
       btn.disabled = true;
 
       try {
-        if (typeof html2canvas === 'undefined') {
-          throw new Error('html2canvas library is not loaded');
+        if (document.fonts && document.fonts.ready) {
+          await document.fonts.ready;
         }
-        const canvas = await html2canvas(card, {
-          scale: 2.5,
-          useCORS: true,
-          backgroundColor: '#090d16',
-          logging: false
-        });
-        const imgData = canvas.toDataURL('image/png');
-        const a = document.createElement('a');
-        a.href = imgData;
-        a.download = `shopee_wrapped_${selectedYear.toLowerCase()}.png`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        showToast('Saved Wrapped Card as high-res PNG image!', '🖼️');
+
+        const data = window.currentWrappedData || {
+          yearLabel: document.getElementById('wrapped-year-label')?.textContent?.trim() || 'ALL TIME',
+          personaTitle: document.getElementById('wrapped-persona-title')?.textContent?.trim() || '🛍️ Everyday Smart Shopper',
+          personaDesc: document.getElementById('wrapped-persona-desc')?.textContent?.trim() || 'You keep a balanced cart and know how to spot great deals.',
+          totalSpent: document.getElementById('wrapped-total-spent')?.textContent?.trim() || 'RM 0.00',
+          orderCount: parseInt(document.getElementById('wrapped-orders')?.textContent || '0', 10) || 0,
+          totalItems: parseInt((document.getElementById('wrapped-orders')?.textContent?.match(/\((\d+)\s*items\)/) || [])[1] || '0', 10) || 0,
+          totalSaved: document.getElementById('wrapped-saved')?.textContent?.trim() || 'RM 0.00',
+          saveRate: 0,
+          avgOrder: document.getElementById('kpi-avg-order')?.textContent?.trim() || 'RM 0.00',
+          maxOrderPaid: document.getElementById('kpi-max-order')?.textContent?.trim() || 'RM 0.00',
+          topExpensiveItems: []
+        };
+
+        const canvas = generateStoryCanvas(data);
+        const yearStr = (selectedYear || 'all_time').toLowerCase();
+        const filename = `shopee_wrapped_${yearStr}_story_9x16.png`;
+
+        if (canvas.toBlob) {
+          canvas.toBlob(blob => {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            setTimeout(() => URL.revokeObjectURL(url), 1000);
+            showToast('Saved 9:16 Story PNG (Ready for WhatsApp Status & Instagram Story)!', '📱');
+          }, 'image/png');
+        } else {
+          const imgData = canvas.toDataURL('image/png');
+          const a = document.createElement('a');
+          a.href = imgData;
+          a.download = filename;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          showToast('Saved 9:16 Story PNG (Ready for WhatsApp Status & Instagram Story)!', '📱');
+        }
       } catch (err) {
-        console.error('Failed to generate image:', err);
-        showToast('Could not save image: ' + err.message, '❌');
+        console.error('Failed to generate story image:', err);
+        showToast('Could not save story image: ' + err.message, '❌');
       } finally {
         btn.innerHTML = origHtml;
         btn.disabled = false;
@@ -1392,29 +1704,42 @@
     }
 
     function copyWrappedSummary() {
-      const persona = document.getElementById('wrapped-persona-title').textContent;
-      const spent = document.getElementById('wrapped-total-spent').textContent;
-      const orders = document.getElementById('wrapped-orders').textContent;
-      const saved = document.getElementById('wrapped-saved').textContent;
+      const persona = document.getElementById('wrapped-persona-title').textContent.trim();
+      const spent = document.getElementById('wrapped-total-spent').textContent.trim();
+      const orders = document.getElementById('wrapped-orders').textContent.trim();
+      const saved = document.getElementById('wrapped-saved').textContent.trim();
+      const yearDisplay = selectedYear === 'ALL' ? 'ALL TIME' : selectedYear;
 
       const text = [
-        `🛍️ MY SHOPEE WRAPPED (${selectedYear})`,
+        `🛍️ MY SHOPEE WRAPPED (${yearDisplay})`,
         `━━━━━━━━━━━━━━━━━━━━━━━━`,
         `🏅 Persona: ${persona}`,
         `💰 Total Spent: ${spent}`,
         `📦 Completed Orders: ${orders}`,
         `🏷️ Total Saved: ${saved}`,
         `━━━━━━━━━━━━━━━━━━━━━━━━`,
-        `Checked 100% privately via ShopeeWrapped Analyzer!`
+        `Generated via ShopeeWrapped • by hazeeq.my`
       ].join('\n');
 
-      const textarea = document.createElement('textarea');
-      textarea.value = text;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textarea);
-      showToast('Shareable Wrapped summary copied to clipboard!', '📸');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast('Shareable Wrapped summary copied to clipboard!', '📋');
+        }).catch(() => {
+          fallbackCopy(text);
+        });
+      } else {
+        fallbackCopy(text);
+      }
+
+      function fallbackCopy(str) {
+        const textarea = document.createElement('textarea');
+        textarea.value = str;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        showToast('Shareable Wrapped summary copied to clipboard!', '📋');
+      }
     }
 
     function escapeHtml(str) {
