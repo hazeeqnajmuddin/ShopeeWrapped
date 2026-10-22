@@ -210,7 +210,7 @@
             </div>
 
             <div class="text-[11px] text-slate-400 flex items-center justify-between border-t border-slate-800/80 pt-3">
-              <span>🔒 Reads <code class="text-slate-300">/api/v4/order/get_order_list</code> locally</span>
+              <span>🔒 100% Client-Side • Direct from your Shopee session</span>
               <button onclick="toggleScriptPreview()" class="text-shopee-400 hover:underline font-medium">Inspect Source Code</button>
             </div>
           </div>
@@ -580,81 +580,165 @@
   }
   const banner = document.createElement('div');
   banner.style.cssText = 'position:fixed;top:20px;right:20px;z-index:999999;background:#ee4d2d;color:#fff;padding:16px 22px;border-radius:12px;font-family:sans-serif;font-weight:bold;box-shadow:0 10px 25px rgba(0,0,0,0.3);';
-  banner.innerText = '⏳ Fetching Shopee orders... (0)';
+  banner.innerText = '⏳ Connecting to Shopee order history... (0)';
   document.body.appendChild(banner);
 
-  let offset = 0, limit = 20, orders = [];
+  function fmtDate(ts){
+    if(!ts || isNaN(ts)) return null;
+    const d = new Date(ts);
+    if(isNaN(d.getTime())) return null;
+    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  }
+
+  function parseSN(sn){
+    if(!sn || typeof sn !== 'string') return null;
+    const m = sn.trim().match(/^(\\d{2})(\\d{2})(\\d{2})/);
+    if(!m) return null;
+    const y = parseInt(m[1], 10), mo = parseInt(m[2], 10), da = parseInt(m[3], 10);
+    if(y >= 15 && y <= 35 && mo >= 1 && mo <= 12 && da >= 1 && da <= 31){
+      return (y >= 50 ? 1900 + y : 2000 + y) + '-' + String(mo).padStart(2, '0') + '-' + String(da).padStart(2, '0');
+    }
+    return null;
+  }
+
+  let offset = 0, limit = 20, raw = [], useCheckout = true;
   while(true){
     try {
-      const res = await fetch('/api/v4/order/get_order_list?limit=' + limit + '&list_type=3&offset=' + offset);
-      const json = await res.json();
-      const list = json?.data?.details_list;
-      if(!list || list.length === 0) break;
-
-      for(const o of list){
-        const paid = (o.info_card?.final_total || 0) / 100000;
-        let origTotal = 0, qtyTotal = 0, itemsArr = [], shopName = 'Shopee Seller', timestamp = null;
-        const cards = o.info_card?.order_list_cards || [];
-        for(const c of cards){
-          shopName = c.shop_info?.shop_name || c.shop_info?.username || shopName;
-          
-          let cardItems = [];
-          if(c.product_info?.item_groups && Array.isArray(c.product_info.item_groups)){
-            for(const g of c.product_info.item_groups){
-              if(Array.isArray(g.items)) cardItems.push(...g.items);
+      let list = [], nextOffset = null;
+      if(useCheckout){
+        try {
+          const res = await fetch('/api/v4/order/get_all_order_and_checkout_list?limit=' + limit + '&offset=' + offset);
+          if(res.ok){
+            const j = await res.json();
+            if(j?.data){
+              list = j.data.order_data?.details_list || j.data.details_list || [];
+              nextOffset = j.data.next_offset;
             }
+          } else {
+            useCheckout = false;
           }
-          if(cardItems.length === 0 && Array.isArray(c.product_info?.items)){
-            cardItems.push(...c.product_info.items);
-          }
-          if(cardItems.length === 0 && Array.isArray(c.items)){
-            cardItems.push(...c.items);
-          }
-          if(cardItems.length === 0 && Array.isArray(c.item_list)){
-            cardItems.push(...c.item_list);
-          }
-
-          for(const it of cardItems){
-            const q = it.amount || it.quantity || 1;
-            const p = (it.order_price || it.price || 0) / 100000;
-            const orig = (it.price_before_discount && it.price_before_discount > 0) ? (it.price_before_discount / 100000) : p;
-            origTotal += orig * q;
-            qtyTotal += q;
-            const name = it.name || it.item_name || it.product_name || '';
-            const variation = it.model_name ? ' [' + it.model_name + ']' : '';
-            if(name) itemsArr.push(name + variation + ' (x' + q + ')');
-          }
+        } catch(e){
+          useCheckout = false;
         }
-        let timestamp = null;
-        const ctime = o.info_card?.ctime || o.create_time || o.ctime || o.info_card?.create_time || o.pay_time || o.info_card?.pay_time || o.shipping?.tracking_info?.ctime || null;
-        if(ctime) timestamp = ctime * 1000;
-        let orderDate = '';
-        if(timestamp){
-          orderDate = new Date(timestamp).toISOString().split('T')[0];
-        } else if(orders.length > 0){
-          orderDate = orders[orders.length - 1].date;
-        } else {
-          orderDate = new Date().toISOString().split('T')[0];
-        }
-        orders.push({
-          orderId: String(o.info_card?.order_id || ''),
-          date: orderDate,
-          shop: shopName,
-          items: itemsArr.join('; ') || 'Shopee Order',
-          qty: qtyTotal || 1,
-          paid: Number(paid.toFixed(2)),
-          saved: Number(Math.max(0, origTotal - paid).toFixed(2))
-        });
       }
-      banner.innerText = '⏳ Fetching Shopee orders... (' + orders.length + ' found)';
-      const next = json.data.next_offset;
-      if(!next || next <= offset) break;
-      offset = next;
+
+      if(!useCheckout || (list.length === 0 && offset === 0)){
+        useCheckout = false;
+        const res = await fetch('/api/v4/order/get_order_list?limit=' + limit + '&list_type=3&offset=' + offset);
+        if(!res.ok) break;
+        const j = await res.json();
+        list = j?.data?.details_list || [];
+        nextOffset = j?.data?.next_offset;
+      }
+
+      if(!list || list.length === 0) break;
+      for(const item of list) raw.push(item);
+      banner.innerText = '⏳ Fetching Shopee orders... (' + raw.length + ' found)';
+      if(!nextOffset || nextOffset <= offset) break;
+      offset = nextOffset;
       await new Promise(r => setTimeout(r, 220));
-    } catch(e) {
-      console.error(e);
+    } catch(err){
+      console.error(err);
       break;
     }
+  }
+
+  const orders = [];
+  for(let i = 0; i < raw.length; i++){
+    const o = raw[i];
+    const paid = (o.info_card?.final_total || o.final_total || 0) / 100000;
+    let origTotal = 0, qtyTotal = 0, itemsArr = [], shopName = 'Shopee Seller', cardSn = null;
+    const cards = o.info_card?.order_list_cards || o.order_list_cards || [];
+    for(const c of cards){
+      shopName = c.shop_info?.shop_name || c.shop_info?.username || shopName;
+      if(c.order_sn) cardSn = c.order_sn;
+      let cardItems = [];
+      if(c.product_info?.item_groups && Array.isArray(c.product_info.item_groups)){
+        for(const g of c.product_info.item_groups){
+          if(Array.isArray(g.items)) cardItems.push(...g.items);
+        }
+      }
+      if(cardItems.length === 0 && Array.isArray(c.product_info?.items)) cardItems.push(...c.product_info.items);
+      if(cardItems.length === 0 && Array.isArray(c.items)) cardItems.push(...c.items);
+      if(cardItems.length === 0 && Array.isArray(c.item_list)) cardItems.push(...c.item_list);
+
+      for(const it of cardItems){
+        const q = it.amount || it.quantity || 1;
+        const p = (it.order_price || it.price || 0) / 100000;
+        const orig = (it.price_before_discount && it.price_before_discount > 0) ? (it.price_before_discount / 100000) : p;
+        origTotal += orig * q;
+        qtyTotal += q;
+        const name = it.name || it.item_name || it.product_name || '';
+        const variation = it.model_name ? ' [' + it.model_name + ']' : '';
+        if(name) itemsArr.push(name + variation + ' (x' + q + ')');
+      }
+    }
+
+    const ctime = o.create_time || o.ctime || o.info_card?.create_time || o.info_card?.ctime || o.pay_time || o.info_card?.pay_time || null;
+    let orderDate = null;
+    if(ctime){
+      orderDate = fmtDate(ctime < 10000000000 ? ctime * 1000 : ctime);
+    }
+    const orderSn = o.order_sn || o.info_card?.order_sn || cardSn;
+    if(!orderDate && orderSn){
+      orderDate = parseSN(orderSn);
+    }
+    if(!orderDate && o.shipping?.tracking_info?.ctime){
+      const t = o.shipping.tracking_info.ctime;
+      orderDate = fmtDate(t < 10000000000 ? t * 1000 : t);
+    }
+
+    orders.push({
+      orderId: String(o.info_card?.order_id || o.order_id || orderSn || ''),
+      orderSn: orderSn || undefined,
+      date: orderDate,
+      shop: shopName,
+      items: itemsArr.join('; ') || 'Shopee Order',
+      qty: qtyTotal || 1,
+      paid: Number(paid.toFixed(2)),
+      saved: Number(Math.max(0, origTotal - paid).toFixed(2))
+    });
+  }
+
+  for(let i = 0; i < orders.length; i++){
+    if(!orders[i].date){
+      try {
+        const curId = BigInt(orders[i].orderId || '0');
+        if(curId > 0n){
+          for(let j = Math.max(0, i - 5); j <= Math.min(orders.length - 1, i + 5); j++){
+            if(i !== j && orders[j].date){
+              const oId = BigInt(orders[j].orderId || '0');
+              const diff = curId > oId ? curId - oId : oId - curId;
+              if(diff <= 10n){
+                orders[i].date = orders[j].date;
+                break;
+              }
+            }
+          }
+        }
+      } catch(e){}
+
+      if(!orders[i].date){
+        for(let k = i - 1; k >= 0; k--){
+          if(orders[k].date){
+            orders[i].date = orders[k].date;
+            break;
+          }
+        }
+      }
+      if(!orders[i].date){
+        for(let k = i + 1; k < orders.length; k++){
+          if(orders[k].date){
+            orders[i].date = orders[k].date;
+            break;
+          }
+        }
+      }
+      if(!orders[i].date){
+        orders[i].date = fmtDate(Date.now());
+      }
+    }
+    delete orders[i].orderSn;
   }
 
   const dataStr = JSON.stringify(orders, null, 2);
@@ -663,7 +747,9 @@
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
   a.download = 'shopee_orders.json';
+  document.body.appendChild(a);
   a.click();
+  document.body.removeChild(a);
   banner.style.background = '#10b981';
   banner.innerText = '✅ Exported ' + orders.length + ' orders! File downloaded & copied to clipboard.';
   setTimeout(() => banner.remove(), 6000);
