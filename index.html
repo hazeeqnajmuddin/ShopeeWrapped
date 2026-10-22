@@ -50,7 +50,9 @@
       background: linear-gradient(135deg, #EE4D2D 0%, #FF7337 100%);
     }
     .wrapped-card-gradient {
-      background: radial-gradient(circle at top right, #ff7337 0%, #ee4d2d 42%, #18181b 92%);
+      background: radial-gradient(circle at 85% 12%, rgba(255, 214, 102, 0.4) 0%, transparent 55%),
+                  radial-gradient(circle at 85% 90%, rgba(238, 77, 45, 0.3) 0%, transparent 55%),
+                  linear-gradient(165deg, #FF6433 0%, #EE4D2D 28%, #D43212 55%, #38121A 85%, #1C0910 100%);
     }
     /* Custom Scrollbar */
     ::-webkit-scrollbar {
@@ -413,64 +415,61 @@
 
         <!-- Right 1 Column: Shareable "Shopee Wrapped" Card -->
         <div class="flex flex-col justify-between space-y-4">
-          <div id="wrapped-card" class="wrapped-card-gradient rounded-3xl p-6 text-white shadow-2xl border border-white/15 relative overflow-hidden flex-1 flex flex-col justify-between">
-            <!-- Decorative Glow -->
-            <div class="absolute -bottom-12 -right-12 w-44 h-44 bg-amber-400/20 rounded-full blur-2xl pointer-events-none"></div>
-
+          <div id="wrapped-card" class="wrapped-card-gradient rounded-3xl p-6 text-white shadow-2xl border border-white/20 relative overflow-hidden flex-1 flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-2">
                   <span class="text-xl">🛍️</span>
-                  <span class="font-display font-extrabold text-sm tracking-wider uppercase">Shopee Wrapped</span>
+                  <span class="font-display font-extrabold text-sm tracking-wider uppercase text-white">Shopee Wrapped</span>
                 </div>
-                <span id="wrapped-year-label" class="px-2.5 py-0.5 rounded-full bg-black/30 backdrop-blur-md text-xs font-bold border border-white/15">
+                <span id="wrapped-year-label" class="px-3 py-0.5 rounded-full bg-black/40 text-xs font-bold border border-white/20 text-white uppercase tracking-wider">
                   ALL TIME
                 </span>
               </div>
 
               <!-- Shopper Persona -->
-              <div class="mt-6 bg-black/25 backdrop-blur-md rounded-2xl p-4 border border-white/10">
-                <div class="text-[11px] uppercase tracking-widest text-orange-200 font-semibold">Your Shopper Persona</div>
+              <div class="mt-5 bg-white/[0.12] border border-white/20 rounded-2xl p-4 shadow-sm">
+                <div class="text-[10.5px] uppercase tracking-widest text-orange-200 font-bold">Your Shopper Persona</div>
                 <div id="wrapped-persona-title" class="font-display text-xl sm:text-2xl font-extrabold mt-1 text-white">
                   🏆 Mega Sale VIP
                 </div>
-                <p id="wrapped-persona-desc" class="text-xs text-orange-100/90 mt-1">
+                <p id="wrapped-persona-desc" class="text-xs text-orange-100 font-medium mt-1 leading-relaxed">
                   You time your checkouts with precision and never miss a voucher drop.
                 </p>
               </div>
 
               <!-- Big Total Spend -->
-              <div class="mt-5">
-                <div class="text-xs uppercase tracking-wider text-orange-100/80 font-medium">Total Damage Done</div>
-                <div id="wrapped-total-spent" class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight mt-0.5">
+              <div class="mt-4">
+                <div class="text-xs uppercase tracking-wider text-orange-200 font-bold">Total Damage Done</div>
+                <div id="wrapped-total-spent" class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight mt-0.5 text-white">
                   RM 0.00
                 </div>
               </div>
 
               <!-- Mini Grid Stats -->
-              <div class="grid grid-cols-2 gap-3 mt-5">
-                <div class="bg-black/25 rounded-xl p-3 border border-white/10">
-                  <div class="text-[11px] text-orange-200">Orders Placed</div>
-                  <div id="wrapped-orders" class="font-display text-lg font-bold mt-0.5">0</div>
+              <div class="grid grid-cols-2 gap-3 mt-4">
+                <div class="bg-white/[0.10] border border-white/18 rounded-xl p-3 shadow-sm">
+                  <div class="text-[11px] font-semibold text-orange-200">Orders Placed</div>
+                  <div id="wrapped-orders" class="font-display text-lg font-extrabold mt-0.5 text-white">0</div>
                 </div>
-                <div class="bg-black/25 rounded-xl p-3 border border-white/10">
-                  <div class="text-[11px] text-orange-200">Total Saved</div>
-                  <div id="wrapped-saved" class="font-display text-lg font-bold text-emerald-300 mt-0.5">RM 0</div>
+                <div class="bg-white/[0.10] border border-white/18 rounded-xl p-3 shadow-sm">
+                  <div class="text-[11px] font-semibold text-orange-200">Total Saved</div>
+                  <div id="wrapped-saved" class="font-display text-lg font-extrabold text-emerald-300 mt-0.5">RM 0</div>
                 </div>
               </div>
 
               <!-- Top 3 Shops List -->
-              <div class="mt-5">
-                <div class="text-[11px] uppercase tracking-wider text-orange-200 font-semibold mb-2">Top Go-To Shops</div>
-                <div id="wrapped-top-shops" class="space-y-1.5 text-xs">
+              <div class="mt-4">
+                <div class="text-[11px] uppercase tracking-wider text-orange-200 font-bold mb-2">Top Go-To Shops</div>
+                <div id="wrapped-top-shops" class="space-y-2 text-xs">
                   <!-- Populated dynamically -->
                 </div>
               </div>
             </div>
 
-            <div class="mt-6 pt-3 border-t border-white/15 flex items-center justify-between text-[11px] text-orange-100/80">
+            <div class="mt-5 pt-3 border-t border-white/20 flex items-center justify-between text-[11px] text-orange-200 font-medium">
               <span>Generated via ShopeeWrapped</span>
-              <span>🔒 100% Private</span>
+              <span class="inline-flex items-center gap-1 bg-black/30 px-2 py-0.5 rounded-full border border-white/15 text-orange-100">🔒 100% Private</span>
             </div>
           </div>
 
@@ -1122,9 +1121,12 @@
 
       const topShopsContainer = document.getElementById('wrapped-top-shops');
       topShopsContainer.innerHTML = topShops.map(([shop, amt], idx) => `
-        <div class="flex items-center justify-between bg-black/20 px-3 py-1.5 rounded-lg">
-          <span class="truncate pr-2 font-medium">${idx + 1}. ${escapeHtml(shop)}</span>
-          <span class="font-bold text-orange-200 shrink-0">${formatMoney(amt)}</span>
+        <div class="flex items-center justify-between bg-white/[0.09] border border-white/15 px-3 py-2 rounded-xl shadow-sm">
+          <div class="flex items-center gap-2.5 min-w-0 pr-2">
+            <span class="w-5 h-5 rounded-md flex items-center justify-center text-[10.5px] font-extrabold shrink-0 ${idx === 0 ? 'bg-amber-400/30 text-amber-300 border border-amber-400/50' : idx === 1 ? 'bg-slate-200/25 text-white border border-white/40' : 'bg-amber-700/30 text-amber-200 border border-amber-600/40'}">${idx + 1}</span>
+            <span class="font-semibold text-white tracking-tight leading-normal" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 175px; padding-bottom: 2px;">${escapeHtml(shop)}</span>
+          </div>
+          <span class="font-bold text-orange-100 shrink-0 text-xs">${formatMoney(amt)}</span>
         </div>
       `).join('') || '<div class="text-orange-200">No shop data</div>';
     }
@@ -1364,10 +1366,19 @@
           throw new Error('html2canvas library is not loaded');
         }
         const canvas = await html2canvas(card, {
-          scale: 2.5,
+          scale: 3,
           useCORS: true,
           backgroundColor: '#090d16',
-          logging: false
+          logging: false,
+          onclone: (clonedDoc) => {
+            const clonedCard = clonedDoc.getElementById('wrapped-card');
+            if (clonedCard) {
+              clonedCard.style.overflow = 'visible';
+              clonedCard.querySelectorAll('span, div').forEach(el => {
+                el.style.overflow = 'visible';
+              });
+            }
+          }
         });
         const imgData = canvas.toDataURL('image/png');
         const a = document.createElement('a');
